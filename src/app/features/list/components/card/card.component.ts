@@ -1,7 +1,7 @@
 import { Component, input, computed } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { Product } from '../../../../shared/interfaces/productInterface';
+import { Product } from '../../../../shared/interfaces/product.Interface';
 
 @Component({
   selector: 'app-card',
@@ -12,5 +12,5 @@ import { Product } from '../../../../shared/interfaces/productInterface';
 })
 export class CardComponent {
   product = input.required<Product>();
-  productTitle = computed(() => this.product().title)
+  productTitle = computed(() => this.product().title);
 }
